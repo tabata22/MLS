@@ -1,0 +1,20 @@
+2021-03-21 14:45:53.035 +04:00 [INF] test message
+2021-03-21 14:47:25.629 +04:00 [INF] test message
+2021-03-21 14:47:30.304 +04:00 [WRN] No type was specified for the decimal property 'Balance' on entity type 'Loan'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-03-21 14:47:30.523 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-03-21 14:47:30.525 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-03-21 14:47:42.591 +04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'MLS.Data.LoanDbContext'.
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-03-21 14:49:40.509 +04:00 [INF] connection established successfully
+2021-03-21 14:49:41.024 +04:00 [WRN] No type was specified for the decimal property 'Balance' on entity type 'Loan'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-03-21 14:49:41.259 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-03-21 14:49:41.261 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-03-21 14:49:41.724 +04:00 [INF] 1 messages sent to rabbit
+2021-03-21 14:51:51.310 +04:00 [INF] connection established successfully
+2021-03-21 14:51:51.834 +04:00 [WRN] No type was specified for the decimal property 'Balance' on entity type 'Loan'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-03-21 14:51:52.076 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-03-21 14:51:52.078 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-03-21 14:51:52.546 +04:00 [INF] 1 messages sent to rabbit
