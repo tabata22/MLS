@@ -54,6 +54,8 @@ namespace MLS.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MLS.Api", Version = "v1" });
             });
 
+            //services.AddElastic(Configuration);
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddCookie()
                 .AddJwtBearer(jwtBearerOptions =>

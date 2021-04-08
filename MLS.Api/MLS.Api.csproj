@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MLS.Data\MLS.Data.csproj" />
+    <ProjectReference Include="..\MLS.Elastic\MLS.Elastic.csproj" />
     <ProjectReference Include="..\MLS.Service\MLS.Service.csproj" />
   </ItemGroup>
 
