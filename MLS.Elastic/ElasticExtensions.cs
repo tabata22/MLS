@@ -20,7 +20,7 @@ namespace MLS.Elastic
             var client = new ElasticClient(connectionSettings);
 
             services.AddSingleton(client);
-            services.AddSingleton(typeof(IElasticService<>), typeof(ElasticService<>));
+            services.AddSingleton<IElasticService, ElasticService>();
         }
     }
 }

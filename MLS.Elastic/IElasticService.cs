@@ -3,9 +3,11 @@ using Nest;
 
 namespace MLS.Elastic
 {
-    public interface IElasticService<TDocument> where TDocument : class
+    public interface IElasticService
     {
-        Task<IndexResponse> IndexDocument(TDocument document);
-        Task<TDocument> GetDocument(string id);
+        Task<IndexResponse> Index<TDocument>(TDocument document) where TDocument : class;
+        Task<IndexResponse> IndexDocument<TDocument>(TDocument document) where TDocument : class;
+        Task<TDocument> GetDocument<TDocument>(string id) where TDocument : class;
+        Task<DeleteResponse> DeleteAsync<TDocument>(string id) where TDocument : class;
     }
 }
