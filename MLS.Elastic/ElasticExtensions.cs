@@ -11,9 +11,12 @@ namespace MLS.Elastic
         {
             var connectionUrl = configuration["Elastic:Url"];
             if (string.IsNullOrWhiteSpace(connectionUrl))
-                throw new ArgumentNullException("elastic url is empty or null");
+                throw new ArgumentException("ElasticSearch url is null or empty");
 
             var defaultIndex = configuration["Elastic:Index"];
+            if (string.IsNullOrWhiteSpace(defaultIndex))
+                throw new ArgumentException("ElasticSearch default index is null or empty");
+
             var connectionSettings = new ConnectionSettings(new Uri(connectionUrl))
                 .DefaultIndex(defaultIndex);
 

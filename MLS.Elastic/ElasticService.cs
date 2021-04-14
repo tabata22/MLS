@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Nest;
 
 namespace MLS.Elastic
@@ -24,9 +25,10 @@ namespace MLS.Elastic
             return response;
         }
 
-        public async Task<IndexResponse> Index<TDocument>(TDocument document) where TDocument : class
+        public async Task<IndexResponse> Index<TDocument>(TDocument document, Func<IndexDescriptor<TDocument>, IIndexRequest<TDocument>> request) 
+            where TDocument : class
         {
-            return await _elasticClient.IndexAsync(document, i => i.Index("loans"));
+            return await _elasticClient.IndexAsync(document, request);
         }
 
         public virtual async Task<IndexResponse> IndexDocument<TDocument>(TDocument document) where TDocument : class
